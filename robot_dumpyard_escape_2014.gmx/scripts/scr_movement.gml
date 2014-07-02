@@ -13,7 +13,7 @@
 if keyboard_check_released(vk_control)
    {
    canOverrideStep = true;
-   show_debug_message("RELEASE");
+   //show_debug_message("RELEASE");
    }
    
 // Check for press
@@ -22,14 +22,17 @@ if keyboard_check_direct(vk_lcontrol)
    if (stepping_lc)
        {
        // If it's already stepping, keep going.
-       show_debug_message("LEFT");
+       if (torque_l<torque_max) {torque_l += torque_accel;}
+       playerStep("l");
        } else if (canOverrideStep)
        {
        // If it's not, check if it can interrupt the other's step
        canOverrideStep = false;
        stepping_lc = true;
        stepping_rc = false;
-       show_debug_message("LEFT START");
+       // reset the torque to 0, then start stepping
+       torque_l = 0;
+       playerStep("l");
        }
    
 }
@@ -38,13 +41,15 @@ if keyboard_check_direct(vk_rcontrol)
    {
    if (stepping_rc)
        {
-       show_debug_message("RIGHT");
+       if (torque_r<torque_max) {torque_r += torque_accel;}
+       playerStep("r");
        } else if (canOverrideStep)
        {
        canOverrideStep = false;
        stepping_rc = true;
        stepping_lc = false;
-       show_debug_message("RIGHT START");
+       torque_r = 0;
+       playerStep("r");
        }
    }
    
