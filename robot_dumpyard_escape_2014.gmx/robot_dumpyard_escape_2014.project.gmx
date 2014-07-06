@@ -8,7 +8,9 @@
   <sprites name="sprites">
     <sprite>sprites\s_player_0</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_test</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_movement.gml</script>
@@ -19,7 +21,8 @@
     <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\start_room</room>
+    <room>rooms\gameplay_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
