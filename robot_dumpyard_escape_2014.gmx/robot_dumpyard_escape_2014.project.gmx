@@ -21,8 +21,8 @@
     <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\start_room</room>
     <room>rooms\gameplay_room</room>
+    <room>rooms\start_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
