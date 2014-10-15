@@ -5,5 +5,5 @@ canOverrideStep = true;
 // Movement
 torque_l = 0;
 torque_r = 0;
-torque_accel = 2;
-torque_max = 40;
+torque_accel = 1.5;
+torque_max = 20;

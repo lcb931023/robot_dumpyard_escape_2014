@@ -7,6 +7,12 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\s_player_0</sprite>
+    <sprite>sprites\s_btn_play</sprite>
+    <sprite>sprites\s_btn_back</sprite>
+    <sprite>sprites\s_btn_again</sprite>
+    <sprite>sprites\s_btn_help</sprite>
+    <sprite>sprites\s_janitor_0</sprite>
+    <sprite>sprites\s_bullet_0</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_test</background>
@@ -19,11 +25,29 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
+    <object>objects\btn_play</object>
+    <object>objects\btn_help</object>
+    <object>objects\btn_again</object>
+    <object>objects\btn_back</object>
+    <object>objects\Buttons</object>
+    <object>objects\obj_janitor</object>
+    <object>objects\obj_bullet</object>
+    <object>objects\obj_bullet_d</object>
+    <object>objects\obj_bullet_s</object>
+    <object>objects\obj_bullet_a</object>
+    <object>objects\obj_bullet_j</object>
+    <object>objects\obj_bullet_k</object>
+    <object>objects\obj_bullet_l</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\gameplay_room</room>
     <room>rooms\start_room</room>
+    <room>rooms\gameplay_room</room>
+    <room>rooms\end_room</room>
   </rooms>
+  <constants number="2">
+    <constant name="GM_build_date">41927.4750127778</constant>
+    <constant name="GM_version">'1.0.0.2'</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
